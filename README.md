@@ -10,19 +10,14 @@
 $ python3 --version
 Python 3.8.5
 ```
-
-
-
+Το σύστημα που χρησιμοποιήθηκε είναι Ubuntu στην εξής έκδοση
+```markdown
 $ lsb_release -a
-No LSB modules are available.
 Distributor ID:	Ubuntu
 Description:	Ubuntu 20.04.1 LTS
 Release:	20.04
 Codename:	focal
-
-
-$ python3 --version
-Python 3.8.5
+```
 
 
 
