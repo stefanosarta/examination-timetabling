@@ -4,6 +4,29 @@
 
 Η εφαρμογή που φτιάχτηκε είναι σε θέση να λύσει το πρόβλημα αυτό και να επιστρέψει ως αποτέλεσμα εκτός από ένα αρχείο με κατάληξη .sol που περιέχει μέσα την κάθε εξέταση και την περίοδο που τοποθετείται αλλά και το κόστος της επίλυσης. Το κόστος της επίλυσης προκύπτει από τις περιόδους που θα τοποθετηθεί ο κάθε φοιτητής ώστε να δώσει το μάθημα. Εκτός προφανώς της απαγόρευσης να συμμετάσχει στην ίδια περίοδο έχοντας σε αυτή την περίπτωση αποτυχία επίλυσης, έχουν οριστεί ποινές των 16,8,4,2,1 για εξετάσεις που απέχουν 1,2,3,4 ή 5 περιόδους αντίστοιχα. Το τελικό αποτέλεσμα αφορά την συνολική ποινή που προστίθεται για κάθε φοιτητή με την διαίρεση του συνολικού αριθμού των φοιτητών.
 
+## Οδηγίες εγκατάστασης
+Η επίλυση του προβλήματος πραγματοποιήθηκε με την γλώσσα προγραμματισμού Python και συγκεκριμένα την έκδοση
+```markdown
+$ python3 --version
+Python 3.8.5
+```
+
+
+
+$ lsb_release -a
+No LSB modules are available.
+Distributor ID:	Ubuntu
+Description:	Ubuntu 20.04.1 LTS
+Release:	20.04
+Codename:	focal
+
+
+$ python3 --version
+Python 3.8.5
+
+
+
+
 You can use the [editor on GitHub](https://github.com/stefanosarta/examination-timetabling/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
