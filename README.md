@@ -18,6 +18,10 @@ Description:	Ubuntu 20.04.1 LTS
 Release:	20.04
 Codename:	focal
 ```
+Απαιτείται η εγκατάσταση του πακέτου [networkx](https://networkx.org/) κάτι το οποίο μπορεί να γίνει με
+```markdown
+$ pip3 install networkx
+```
 
 
 
