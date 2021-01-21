@@ -27,7 +27,7 @@ $ pip3 install networkx
 ## Οδηγίες εκτέλεσης
 **1.** Κατέβασμα των αρχείων στο link
 ```markdown
-https://github.com/stefanosarta/examination-timetabling.git
+https://github.com/stefanosarta/examination-timetabling/archive/main.zip
 ```
 **2.** Εκτέλεση του αρχείου main.py που βρίσκεται στον φάκελο της εργασίας με την εντολή
 ```markdown
