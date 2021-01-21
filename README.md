@@ -32,24 +32,10 @@ $ python3 main.py
 
 **2.** Φόρτωση ενός συγκεκριμένου προβλήματος στη μνήμη μέσω της 1ης επιλογής
 
-### Markdown
+**3.** Επίλυση ενός συγκεκριμένου προβλήματος μέσω της 2ης επιλογής
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+**4.** Φόρτωση της λύσης ενός συγκεκριμένου προβλήματος μέσω της 3ης επιλογής
 
-```markdown
-Syntax highlighted code block
+**5.** Μαζική επίλυση των προβλημάτων μέσω της 4ης επιλογής
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
+Σε κάθε βήμα των 2,3,4 εμφανίζεται η μία αριθμημένη διαθέσιμη λίστα και ο χρήστης καλείται να επιλέξει ανάμεσα στα πιθανά αρχεία.
