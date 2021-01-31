@@ -60,7 +60,7 @@ def solutions():
                   "[4] hec-s-92.sol", "[5] kfu-s-93.sol", "[6] lse-f-91.sol",
                   "[7] pur-s-93.sol", "[8] rye-s-93.sol", "[9] sta-f-83.sol",
                   "[10] tre-s-92.sol", "[11] uta-s-92.sol",
-                  "[12] ute-s-92.sol", "[13] yor-f-83.sol", "[14] car-f-92.sol2"])
+                  "[12] ute-s-92.sol", "[13] yor-f-83.sol"])
 
     for x in range(len(solutions)):
         print(solutions[x])

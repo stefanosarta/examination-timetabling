@@ -1,6 +1,5 @@
 import data as es
 import networkx as nx
-import random
 
 
 def solve_problem(filename):
@@ -35,7 +34,7 @@ def solve_problem(filename):
 
     with open(filename[0:-4]+'.sol', 'w') as f:
         for k, v in exams2.items():
-                f.write('{}\t{}\n'.format(k, v))
+            f.write('{}\t{}\n'.format(k, v))
 
     """
     In the next itteration of the exams2 dictionary we switch dictionary
@@ -49,6 +48,7 @@ def solve_problem(filename):
         else:
             period_exams[v].append(k)
     cost(period_exams)
+
 
 def cost(period_exams):
     """
@@ -77,7 +77,7 @@ def cost(period_exams):
     numofstudents = len(student_periods)
 
     cost = 0
-    d = 0;
+    d = 0
     cost_value = [16, 8, 4, 2, 1]
     for s in student_periods:
         mycal = sorted(student_periods[s])

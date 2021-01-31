@@ -2,7 +2,6 @@ import data as es
 import random
 from load_solution import load_solution
 from solve_problem import cost
-from load_problem import load_problem
 import numpy
 
 """
@@ -16,29 +15,29 @@ We can choose to make small changes each run or bigger ones.
 
 Each possible solution is checked by load_problem function and if its correct
 we check if its better or worse than the one we already have. If is better then
-its being saved as the best. If its not then the last known best is loaded again
-and we keep making changes on that one.
+its being saved as the best. If its not then the last known best is loaded
+again and we keep making changes on that one.
 
 We take care of periods and exams limit of each problem. We do it manually
 
 """
+
+
 def optimize_problem():
-    new_solution = 0
     first_solution = 195
 
     max1 = max(es.optimize_exams.values())
     min1 = min(es.optimize_exams.values())
-    for k in range(0, 1000000): # Run for long time before manually stopping it
-        numberList = [-1, 1, -2, 2, -3, 3] # number of changing a potition. it picks
-                                    # randomly
+    for k in range(0, 1000000):  # Run for long time before manually stop it
+        numberList = [-1, 1, -2, 2, -3, 3]  # number of changing a potition.
+        # it picks randomly
         numberList4 = [1, -1]
         numberList2 = [1, 2, 3, 4, 5, 6, 7, 8, ]
         numberList3 = [-1, -2, -3, -4, -5, -6, -7, -8]
 
-
         # Range here differs for each problem
 
-        for i,v in es.optimize_exams.items():
+        for i, v in es.optimize_exams.items():
             # The next 2 lines can be put outside loop separetely for different
             # kind of swaping values
             option10, option11, option12 = random.sample(range(0, 32), 3)
@@ -47,19 +46,18 @@ def optimize_problem():
             if v < max1-2 and v > min1+2:
                 es.optimize_exams[i] = v+random.choice(numberList)
                 # es.optimize_exams[option2] = v+random.choice(numberList)
-                #es.optimize_exams[option3] = v+random.choice(numberList)
+                # es.optimize_exams[option3] = v+random.choice(numberList)
                 es.optimize_exams[option1] = option10
                 # es.optimize_exams[option4] = option11
-                #es.optimize_exams[option5] = option12
+                # es.optimize_exams[option5] = option12
                 es.optimize_exams[option4] = v+random.choice(numberList4)
 
-            if v > max1-2: # making sure we dont go over max nodes
+            if v > max1-2:  # making sure we dont go over max nodes
                 es.optimize_exams[i] = v+random.choice(numberList3)
                 # es.optimize_exams[option1] = option10
-            if v < min1+2: # making sure we dont go down of 0
+            if v < min1+2:  # making sure we dont go down of 0
                 es.optimize_exams[i] = v+random.choice(numberList2)
                 # es.optimize_exams[option4] = option11
-
 
             period_exams = {}
             for k, v in es.optimize_exams.items():
@@ -81,14 +79,14 @@ def optimize_problem():
                     # print("BETTER")
                     print("BETTER!")
                     print(first_solution)
-                    #print("inputed")
-                    #print(option1)
-                    #print(option3+i)
+                    # print("inputed")
+                    # print(option1)
+                    # print(option3+i)
                     es.best = es.optimize_exams
-                    #keys =  list(es.best.keys())
-                    #random.shuffle(keys)
-                    #[(key, es.best[key]) for key in keys]
-                    with open('car-s-9111.sol', 'w') as f:
+                    # keys =  list(es.best.keys())
+                    # random.shuffle(keys)
+                    # [(key, es.best[key]) for key in keys]
+                    with open('car-f-92.sol', 'w') as f:
                         for key in period_exams:
                             for items in period_exams[key]:
                                 f.write('{}\t{}\n'.format(items, key))
@@ -100,18 +98,18 @@ def optimize_problem():
                     a1 = list(es.optimize_exams.items())
                     numpy.random.shuffle(a1)
                     es.optimize_exams = dict(a1)
-                    #print("else")
-                    #print("inputed")
-                    #print(option1)
-                    #print(option3+i)
+                    # print("else")
+                    # print("inputed")
+                    # print(option1)
+                    # print(option3+i)
             else:
                 # print("1")
                 es.optimize_exams = es.best
                 a1 = list(es.optimize_exams.items())
                 numpy.random.shuffle(a1)
                 es.optimize_exams = dict(a1)
-                #keys =  list(es.optimize_exams.keys())
-                #random.shuffle(keys)
-                #[(key, es.optimize_exams[key]) for key in keys]
+                # keys =  list(es.optimize_exams.keys())
+                # random.shuffle(keys)
+                # [(key, es.optimize_exams[key]) for key in keys]
     print("FINAL")
     print(first_solution)
